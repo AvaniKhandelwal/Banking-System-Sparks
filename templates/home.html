@@ -1,0 +1,95 @@
+{% extends "base.html"%} {% block body %}
+<body>
+  <style>
+      body{
+         background: white;
+
+      }
+      #carouselExampleFade
+      {
+        {% comment %} align:center; {% endcomment %}
+        margin:auto;
+        width:70%;
+        height:585px;
+        {% comment %} background-image:linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,8)); {% endcomment %}
+      }
+      .drk:after {
+        content:"";
+        display:block;
+        position:absolute;
+        top:0;
+        bottom:0;
+        left:0;
+        right:0;
+        background:#e6ffff;
+
+        opacity:0.2;
+
+    }
+  </style>
+
+  <div
+    id="carouselExampleFade"
+    class="carousel slide carousel-fade"
+    data-ride="carousel"
+  >
+    <div class="carousel-inner">
+      <div class="carousel-item drk active">
+        <img
+          src="static/images/p1.jpg"
+          style="height: 585px"
+          class="d-block w-100"
+        />
+        <div class="carousel-caption d-none d-md-block ml-auto mr-auto">
+          <h1 style="color: #003366; font-size: 500%; margin-bottom: 400px">
+            BANKING SYSTEM
+          </h1>
+        </div>
+      </div>
+      <div class="carousel-item drk">
+        <img
+          src="static/images/preview1.jpg"
+          style="height: 585px"
+          class="d-block w-100"
+        />
+        <div class="carousel-caption d-none d-md-block ml-auto mr-auto">
+          <h1 style="color: #003366; font-size: 500%; margin-bottom: 400px">
+            BANKING SYSTEM
+          </h1>
+        </div>
+      </div>
+      <div class="carousel-item drk">
+        <img
+          src="static/images/preview2.jpg"
+          style="height: 585px"
+          class="d-block w-100"
+          alt="..."
+        />
+        <div class="carousel-caption d-none d-md-block ml-auto mr-auto">
+          <h1 style="color: #003366; font-size: 500%; margin-bottom: 400px">
+            BANKING SYSTEM
+          </h1>
+        </div>
+      </div>
+    </div>
+    <a
+      class="carousel-control-prev"
+      href="#carouselExampleFade"
+      role="button"
+      data-slide="prev"
+    >
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a
+      class="carousel-control-next"
+      href="#carouselExampleFade"
+      role="button"
+      data-slide="next"
+    >
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
+</body>
+{% endblock body %}

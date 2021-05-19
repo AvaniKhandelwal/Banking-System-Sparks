@@ -1,0 +1,30 @@
+{% extends "base.html"%} {% block body %}
+<body>
+<div class="container" style="text-align:center;" >
+<h2>Customers</h2>
+<table class="table table-hover" style="width:80%; margin-left:auto; margin-right:auto;background:linear-gradient(180deg, #4CA259 0%, #18DAC3 100%)">
+
+
+  <thead>
+    <tr style="background-color:#0d7367;color:white;">
+      <th scope="col" style="width:5%;">S.No</th>
+      <th scope="col" style="width:20%;">Name</th>
+      <th scope="col" style="width:15%;">Mobile No</th>
+      <th scope="col" style="width:20%;">Email</th>
+    </tr>
+  </thead>
+  <tbody>
+  {%for i in customer%}
+    <tr>
+      <th scope="row">{{i.id}}</th>
+      <td><a href="{% url 'money' i.id %}" style="text-decoration:none; color:black;">{{i.name}}</a></td>
+      <td>{{i.phone_no}}</td>
+      <td>{{i.email}}</td>
+    </tr>
+{% endfor %} 
+
+  </tbody>
+</table>
+</div>
+</body>
+{% endblock body %}
